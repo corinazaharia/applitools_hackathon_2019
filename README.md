@@ -3,11 +3,12 @@
 Used Webdriverio v5 with Mocha.
 
 ## Prerequisites
+
 - Node version 8 or above
 - Npm version 6.4.x or above
 - Applitools API Key to be set as environment variable using following commands:
-   * Mac / linux / Windows OS ( with Git bash terminal) : ```export APPLITOOLS_API_KEY='YOUR_API_KEY'```
-   * Windows(Powershell/ command prompt): ```set APPLITOOLS_API_KEY='YOUR_API_KEY'```
+  - Mac / linux / Windows OS ( with Git bash terminal) : `export APPLITOOLS_API_KEY='YOUR_API_KEY'`
+  - Windows(Powershell/ command prompt): `set APPLITOOLS_API_KEY='YOUR_API_KEY'`
 
 ## Getting Started
 
