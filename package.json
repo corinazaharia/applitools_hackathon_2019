@@ -5,8 +5,8 @@
   "scripts": {
     "test": "cross-env wdio wdio.conf.js --spec test/TraditionalTests.spec.ts",
     "test:v2": "cross-env APP_VERSION=V2 wdio wdio.conf.js --spec test/TraditionalTests.spec.ts",
-    "test:visual": "cross-env VISUAL=true wdio wdio.conf.js --spec test/VisualTests.spec.ts",
-    "test:visual:v2": "cross-env APP_VERSION=V2 VISUAL=true wdio wdio.conf.js --spec test/VisualTests.spec.ts",
+    "test:visual": "cross-env VISUAL=true wdio wdio.conf.js --spec test/VisualAITests.spec.ts",
+    "test:visual:v2": "cross-env APP_VERSION=V2 VISUAL=true wdio wdio.conf.js --spec test/VisualAITests.spec.ts",
     "lint": "tslint --fix 'test/**/*.ts' && tslint --fix 'src/**/*.ts'"
   },
   "author": "Corina Zaharia",
