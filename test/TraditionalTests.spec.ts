@@ -30,6 +30,11 @@ describe('1. On the Login page', () => {
     // NOTE: There is no element in the DOM to check if the input is checked or unchecked - so this assert is missing
     assert.isTrue(loginPage.rememberMeCheckBox.isDisplayed());
   });
+
+  it('check the alignment of Remember Me check-box and label', () => {
+    // Could not do it in traditional way
+  });
+
   it('social media elements contain the corespondent names of the icons', () => {
     const socialMedia = loginPage.socialMedia;
     assert.equal(socialMedia.length, 3);
