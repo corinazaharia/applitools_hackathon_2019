@@ -49,7 +49,7 @@ exports.config = {
       maxInstances: 5,
       browserName: 'chrome',
       'goog:chromeOptions': {
-        args: ['--headless', '--fullscreen']
+        args: ['--headless', '--window-size=1280,1024', '--no-sandbox']
       }
     }
   ],
