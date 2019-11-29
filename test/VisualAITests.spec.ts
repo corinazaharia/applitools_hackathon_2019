@@ -1,6 +1,6 @@
-import { Target } from '@applitools/eyes-webdriverio';
 import FinancialOverviewPage from 'src/pages/FinancialOverviewPage';
 import LoginPage from 'src/pages/LoginPage';
+import { Target } from '@applitools/eyes-webdriverio';
 declare let eyes: any;
 
 describe('On the Login page,', () => {
@@ -72,10 +72,12 @@ describe('On the FinancialOverview page when using showAd=true to URL', () => {
   it('ad gifs should be displayed', () => {
     new LoginPage().open('?showAd=true');
     new LoginPage().login('James', 'Bond');
-    // Set 'Layout' matchLevel due to colors changes on the gifs
-    browser.call(() => eyes.setMatchLevel('Content'));
+    const flashSaleGif1 = new FinancialOverviewPage().flashSaleGif1();
+    const flashSaleGif2 = new FinancialOverviewPage().flashSaleGif2();
     browser.call(() => eyes.open(browser));
-    browser.call(() => eyes.check('Gifs', Target.window()));
+    browser.call(() =>
+      eyes.check('Gifs', Target.window().layout(flashSaleGif1, flashSaleGif2))
+    );
     browser.call(() => eyes.close());
   });
 });
